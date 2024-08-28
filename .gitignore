@@ -1,0 +1,120 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+*.db
+
+# If using a custom secret key file
+.env
+.secret_key
+
+# Local development
+/local_settings.py
+
+# Media and static files
+media/
+staticfiles/
+static/
+
+# Ignore virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Ignore other Python environments (e.g., Anaconda)
+conda/
+.conda/
+.condarc
+
+# Ignore any egg files and related metadata
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+sdist/
+develop-eggs/
+
+# Ignore Python wheels
+*.whl
+
+# Ignore pip dependency cache
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignore any local .env files
+.env
+
+# Ignore .vscode and other editor-specific settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore JetBrains IDEs' (e.g., PyCharm) project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Ignore Mac OS files
+.DS_Store
+
+# Ignore backup files
+*~
+*.bak
+*.swp
+
+# Ignore coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Ignore pytest
+.pytest_cache/
+
+# Ignore translations
+*.mo
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore gunicorn PID file
+gunicorn.pid
+
+# Ignore celery beat schedule file
+celerybeat-schedule
+
+# Ignore Sphinx build files
+docs/_build/
+
+# Ignore pytest HTML report
+report.html
+
+# Ignore mypy and other type checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ignore bandit output
+.bandit/
+
+# Ignore Pyre type checker
+.pyre/

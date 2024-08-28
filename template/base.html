@@ -1,0 +1,231 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} {%endblock title%}</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <style>
+
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+* {
+  font-family: "Titillium Web", sans-serif;
+}
+body {
+  height:100vh;
+  /*position: relative;*/
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(13,132,213,1) 13.3%, rgba(36,60,100,1) 92.9% );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.navbar .navbar-brand {
+  font-size: 30px;
+}
+.navbar .nav-item {
+  padding: 10px 20px;
+  color:white;
+  
+}
+.navbar .nav-link {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.fa-bars {
+  color: #402E32;
+  font-size: 30px;
+}
+.navbar-custom {
+      background-color: #DDA01E;
+       
+    }
+  .img-custom{
+    background-color: rgba(224, 159, 37, 0.7);
+
+  }
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f0f0f0; 
+    padding: 10px; 
+}
+.footer-custom{
+  background-color: rgba(224, 159, 37, 0.7);
+
+}
+.card-custom{
+  background-color:  rgba(255, 237, 203, 0.8);
+
+}
+  </style>
+  </head>
+  
+  <body>
+  
+    <nav class="navbar sticky-top navbar-expand-lg navbar-custom">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="padding: 2px;color:#005248 ;font-weight:bold;font-size: 36px;font-family: 'Arial', sans-serif;text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); ">
+          xFOLD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <i class="fas fa-bars"></i>
+    </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end " style="color:white">
+            <li class="nav-item active">
+              <a class="nav-link" href="home" style="color:#402E32;font-weight:bold">Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="view_profile" style="color:#402E32;font-weight:bold">Account</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="logout" style="color:#402E32;font-weight:bold">Logout</a>
+                  </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <div class="container-fluid">
+      {% if messages %}
+         {% for m in messages %}
+         <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          {{m}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+         {% endfor %}
+      {% endif %}
+    </div>
+     <div style="margin-top: 10px;margin-bottom: 10px; height:1000px;"  >
+
+      {% block body%}
+      {%endblock body%}
+     </div>
+     
+
+     
+ 
+  
+
+    <footer class="footer-custom">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4">
+          <h5 class="mb-3" style="letter-spacing: 2px; color: rgb(22, 12, 117);">About Us</h5>
+          <p style="text-align: justify;">
+            At xFOLD, our mission is to provide a seamless and secure platform for individuals to 
+            store and manage their precious images. We understand the value of memories, and we are 
+            dedicated to preserving them in the digital age!
+          </p>
+        </div>
+        <div class="col-lg-4 col-md-12 mb-4">
+          <h5 class="mb-3" style="letter-spacing: 2px; color: rgb(22, 12, 117);">Contact</h5>
+          <p><i class="fas fa-home mr-3"></i> Maharashtra, India</p>
+            <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+        </div>
+       
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5 class="mb-1" style="letter-spacing: 2px; color: rgb(22, 12, 117);">Follow us</h5>
+          
+
+            <!-- Facebook -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #3b5998"
+               href="#!"
+               role="button"
+               ><i class="fab fa-facebook-f"></i
+              ></a>
+
+            
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #dd4b39"
+               href="#!"
+               role="button"
+               ><i class="fab fa-google"></i
+              ></a>
+
+            <!-- Instagram -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #ac2bac"
+               href="#!"
+               role="button"
+               ><i class="fab fa-instagram"></i
+              ></a>
+
+            <!-- Linkedin -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #0082ca"
+               href="#!"
+               role="button"
+               ><i class="fab fa-linkedin-in"></i
+              ></a>
+            <!-- Github -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #333333"
+               href="#!"
+               role="button"
+               ><i class="fab fa-github"></i
+              ></a>
+         
+        </div>
+        <!--Grid row-->
+          
+        </div>
+      </div>
+    </div>
+   
+  </footer>
+  
+</body>
+
+  <!--nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a  class="nav-link active" aria-current="page" class="nav-link" href="#">Link</a>
+          </li>
+          
+          <li class="nav-item">
+            <a  class="nav-link active" aria-current="page" class="nav-link"  href="logout">Logout</a>
+          </li>
+          <li class="d-flex" class="nav-item">
+            <a  class="nav-link active" aria-current="page" class="nav-link"  href="view_profile">Profile</a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav-->
+
+ 
+</html>
+
+
